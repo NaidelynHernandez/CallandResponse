@@ -1,0 +1,22 @@
+
+const int switchPin = 2; 
+int switchVal = 0; 
+
+void setup() {
+  // set pin as input
+  pinMode(switchPin, INPUT);
+  
+  // initialize the serial communication:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the value of the switch and store it
+  switchVal = digitalRead(2);
+
+  // write the value to the serial port
+  Serial.println(switchVal);
+  
+  // wait a bit for between readings
+  delay(10);
+}
